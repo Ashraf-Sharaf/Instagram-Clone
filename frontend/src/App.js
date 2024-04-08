@@ -1,12 +1,9 @@
 import "./App.css";
-import Login from "./pages/Auth/login";
-import Signup from "./pages/Auth/signup";
+import Auth from "./pages/Auth/auth";
 function App() {
   return <div>
 
-  <Signup/>
-  <Login/>
-
+  <Auth/>
   </div>;
 }
 
