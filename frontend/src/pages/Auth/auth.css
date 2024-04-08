@@ -1,0 +1,11 @@
+.page{
+    height: 90vh;
+}
+.login_form{
+    width: 400px;
+    height: fit-content;
+    border: 0.5px solid #ccc;
+}
+.insta{
+    font-family: 'Billabong', 'Sofia Pro', 'Gelato Script', cursive;
+}

@@ -1,0 +1,40 @@
+*{
+    padding:0;
+    margin:0;
+    border: 0;
+    box-sizing: border-box;
+}
+.flex{
+    display: flex;
+}
+.column{
+    flex-direction: column;
+}
+.align-center{
+    align-items: center;
+}
+.center{
+    align-items: center;
+    justify-content: center;
+}
+.between{
+    justify-content: space-between;
+}
+.around{
+    justify-content: space-around;
+}
+.gap{
+    gap:20px;
+}
+.full_w{
+    width: 100%;
+}
+.full_h{
+    height: 100%;
+}
+.half_w{
+    width: 50%;
+}
+.half_h{
+    width: 50%;
+}
