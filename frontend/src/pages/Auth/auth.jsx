@@ -1,9 +1,11 @@
 import "./auth.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Auth() {
-  const [toggleForm, setToggleForm] = useState(true);
+  const navigate = useNavigate();
 
+  const [toggleForm, setToggleForm] = useState(true);
 
   function Signup() {
     return (
@@ -15,11 +17,14 @@ function Auth() {
           <input className="register_inputs" placeholder=" Full Name"></input>
           <input className="register_inputs" placeholder=" Username"></input>
           <input className="register_inputs" placeholder=" Password"></input>
-          <button className="register_button">Sign up</button>
+          <button className="register_button" >Sign up</button>
         </div>
         <div className="redirection flex center gap">
           <p>Have an account?</p>
-          <button className="switch_button" onClick={(e) => setToggleForm(true)}>
+          <button
+            className="switch_button"
+            onClick={(e) => setToggleForm(true)}
+          >
             Log in
           </button>
         </div>
@@ -35,11 +40,14 @@ function Auth() {
 
           <input className="register_inputs" placeholder=" Username"></input>
           <input className="register_inputs" placeholder=" Password"></input>
-          <button className="register_button">Log in</button>
+          <button className="register_button" onClick={()=>{ navigate("/home");}}>Log in</button>
         </div>
         <div className="redirection flex center gap">
           <p>Don't have an account?</p>
-          <button className="switch_button" onClick={(e) => setToggleForm(false)}>
+          <button
+            className="switch_button"
+            onClick={(e) => setToggleForm(false)}
+          >
             Sign up
           </button>
         </div>
