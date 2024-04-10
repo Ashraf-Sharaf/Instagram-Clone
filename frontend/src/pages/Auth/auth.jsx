@@ -13,7 +13,6 @@ function Auth() {
         <div className="register_form flex column align-center ">
           <h1 className="insta flex center">Instagram</h1>
 
-          <input className="register_inputs" placeholder=" Email"></input>
           <input className="register_inputs" placeholder=" Full Name"></input>
           <input className="register_inputs" placeholder=" Username"></input>
           <input className="register_inputs" placeholder=" Password"></input>
