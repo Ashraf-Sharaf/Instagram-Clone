@@ -1,7 +1,31 @@
-
+import { useState } from "react";
+import PostCard from "./postCard";
 
 function Post() {
-  return <div className="posts container">MY POST !!!</div>
+  const data = [
+    {
+      username: "ashraf",
+      image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREy2PfYLs2DTQHoHyMSM5Loh7Ff3JlpfQFQidcNwZ9aQ&s'
+    },
+
+    {
+      username: "rabih",
+      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREy2PfYLs2DTQHoHyMSM5Loh7Ff3JlpfQFQidcNwZ9aQ&s"
+    },
+    {
+      username: "rabih",
+      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREy2PfYLs2DTQHoHyMSM5Loh7Ff3JlpfQFQidcNwZ9aQ&s"
+    },
+  ];
+  const [posts, setPosts] = useState(data);
+
+  return (
+    <div className="posts container ">
+      {posts.map((post) => {
+        return <PostCard post={post}  />;
+      })}
+    </div>
+  );
 }
 
 export default Post;

@@ -1,0 +1,36 @@
+.posts {
+  width: 60%;
+
+  height: fit-content;
+}
+
+.postcard {
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  color: white;
+}
+
+.imagePost {
+  height: 400px;
+}
+.imageProfile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.comments-section{
+    background-color: black;
+   
+    height: 20px;  
+}
+.comments{
+    background-color: rgb(0, 0, 0);
+    width: 80%;
+}
+.comment-button{
+    background-color: black;
+    color: rgb(69, 69, 235);
+}
