@@ -54,7 +54,7 @@ class UserController extends Controller
 
         $token = Auth::login($user);
         return response()->json([
-            'status' => 'success',
+            'status' => 200,
             'message' => 'User created successfully',
             'user' => $user,
             'authorisation' => [
