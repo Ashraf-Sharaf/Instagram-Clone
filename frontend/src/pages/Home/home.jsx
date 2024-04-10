@@ -2,7 +2,7 @@ import "./home.css";
 import { useState } from "react";
 import Post from "./posts/post";
 import Profile from "./profiles/profile";
-import Recommendation from "./recommendations/Recommendation";
+import Recommendation from "./recommendations/recommendation";
 
 function Home() {
 
