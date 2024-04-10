@@ -16,7 +16,7 @@ function Profile() {
 
 const {fullname,image,email,username,bio}=data;
 
-    return <div className="profiles container flex gap column center">
+    return <div className="profiles container flex gap column align-center">
       <img src={image} className="imageUser" />
       <div>{fullname}</div>
       <div>{email}</div>

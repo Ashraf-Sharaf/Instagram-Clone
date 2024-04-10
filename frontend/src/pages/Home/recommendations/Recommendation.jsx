@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import RecommendationCard from "./recommendationCard";
 
 function Recommendation() {
@@ -16,7 +16,21 @@ function Recommendation() {
       username: "ali",
       image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREy2PfYLs2DTQHoHyMSM5Loh7Ff3JlpfQFQidcNwZ9aQ&s"
     },
+    {
+      username: "ali",
+      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREy2PfYLs2DTQHoHyMSM5Loh7Ff3JlpfQFQidcNwZ9aQ&s"
+    },
+    {
+      username: "ali",
+      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREy2PfYLs2DTQHoHyMSM5Loh7Ff3JlpfQFQidcNwZ9aQ&s"
+    },
+    {
+      username: "ali",
+      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREy2PfYLs2DTQHoHyMSM5Loh7Ff3JlpfQFQidcNwZ9aQ&s"
+    },
   ];
+
+
   const [recommendations, setRecommendations] = useState(data);
 
 

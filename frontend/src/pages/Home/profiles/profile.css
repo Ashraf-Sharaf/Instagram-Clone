@@ -1,11 +1,9 @@
 .profiles {
-  
   margin-top: 20px;
-  border-radius: 10px;
-  border: 1px solid grey;
+  border-right: 1px solid grey;
   color: white;
   width: 20%;
-  height: fit-content;
+
 
   }
   .imageUser{

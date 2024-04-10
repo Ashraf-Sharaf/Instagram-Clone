@@ -4,11 +4,21 @@
 }
 .recommendations {
 
+    margin-top: 20px;
+    border-radius: 10px;
+
+    color: white;
     width: 20%;
-    background-color: rgb(177, 187, 209);
+    height: fit-content;
+  
   }
   .imageRecommend{
     width: 50px;
     height: 50px;
     border-radius: 50%;
+  }
+  .recommend-button{
+   
+    background-color: black;
+    color: rgb(69, 69, 235);
   }
