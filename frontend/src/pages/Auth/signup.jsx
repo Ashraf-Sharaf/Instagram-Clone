@@ -1,8 +1,31 @@
 import { useState } from "react";
+import axios from "axios";
+
 function Signup({ onToggle }) {
   const [fullname, setFullname] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const registerUSer = async () => {
+    try {
+      const data = {
+        name: fullname,
+        username: username,
+        password: password,
+      };
+      const headers={"Content-Type": "multipart/form-data"}
+      const res = await axios.post("http://127.0.0.1:8000/api/register", data,headers);
+   
+      console.log(res.data);
+    } catch (error) {
+      console.error("Error ", error);
+    }
+  };
+
+
+
+
+
 
   return (
     <div className="page flex center column gap">
@@ -25,7 +48,7 @@ function Signup({ onToggle }) {
           type="password"
           onChange={(e) => {setPassword(e.target.value)}}
         ></input>
-        <button className="register_button">Sign up</button>
+        <button className="register_button" onClick={()=>{registerUSer()}}>Sign up</button>
       </div>
       <div className="redirection flex center gap">
         <p>Have an account?</p>
