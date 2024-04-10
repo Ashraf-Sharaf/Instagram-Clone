@@ -9,10 +9,7 @@ use App\Models\User;
 class UserController extends Controller
 {
 
-    // public function __construct()
-    // {
-    //     $this->middleware('auth:api', ['except' => ['login','register']]);
-    // }
+    
 
     public function login(Request $request)
     {
