@@ -1,4 +1,15 @@
 .profiles {
-    width: 20%;
-    background-color: rgb(181, 247, 82);
+  
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  color: white;
+  width: 20%;
+  height: fit-content;
+
+  }
+  .imageUser{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
   }

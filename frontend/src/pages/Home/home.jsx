@@ -10,7 +10,7 @@ function Home() {
 
 
 
-  return <div className="flex parent around full_w gap">
+  return <div className="flex parent gap">
     <Profile/>
     <Post/>
     <Recommendation/>
