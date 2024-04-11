@@ -52,6 +52,7 @@ class UserController extends Controller
             'name' => $request->name,
             'username' => $request->username,
             'password' => Hash::make($request->password),
+            'bio' => $request->bio
         ]);
 
   
@@ -76,12 +77,33 @@ class UserController extends Controller
     public function getUser()
     {
         $user=Auth::user();
-        
+        if($user){
         return response()->json([
             'status'=>200,
             'user' => $user
         ]);
-  
+        }
+
+        return response()->json([
+            'status'=>401,
+        ]);
+    }
+
+
+    public function updateUser(Request $req)
+    {
+        $authUser=Auth::user();
+        
+        $user=User::where("username",$authUser->username)->first();
+        $user->update([
+            'bio'=>$req->bio,
+        ]);
+        $user->save();
+        return response()->json([
+            'status'=>200,
+            'bio'=>$req->bio
+        ]);
+ 
     }
 }
 

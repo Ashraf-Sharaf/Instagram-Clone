@@ -9,6 +9,9 @@ Route::controller(UserController::class)->group(function () {
     Route::post('register', 'register');
     Route::post('logout', 'logout');
     Route::get('getuser','getUser');
+    
+ 
 });
+Route::post('updateUser',[UserController::class,'updateUser']);
 
 

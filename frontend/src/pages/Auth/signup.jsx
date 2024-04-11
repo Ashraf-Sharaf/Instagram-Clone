@@ -5,24 +5,27 @@ function Signup({ onToggle }) {
   const [fullname, setFullname] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [bio, setBio] = useState("");
 
-  const registerUSer = async () => {
+  const registerUser = async () => {
     try {
       const data = {
         name: fullname,
         username: username,
         password: password,
+        bio: bio,
       };
 
       const res = await axios.post("http://127.0.0.1:8000/api/register", data);
-      if (res.status == 200){
+      if (res.status === 200){
       onToggle();
       }
     } catch (error) {
-      alert("Error");
+      console.error(" rror:", error);
     }
+    
   };
-
+  console.log(password);
   return (
     <div className="page flex center column gap">
       <div className="register_form flex column align-center ">
@@ -50,10 +53,18 @@ function Signup({ onToggle }) {
             setPassword(e.target.value);
           }}
         ></input>
+                <input
+          className="register_inputs"
+          placeholder=" Bio"
+          onChange={(e) => {
+            setBio(e.target.value);
+          }}
+        ></input>
+        
         <button
           className="register_button"
           onClick={() => {
-            registerUSer();
+            registerUser();
           }}
         >
           Sign up

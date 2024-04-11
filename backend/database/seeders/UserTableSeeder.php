@@ -16,25 +16,29 @@ class UserTableSeeder extends Seeder
         User::create([
             "name"=>"user1",
             "username"=>"joker",
-            "password"=>"pass1234"
+            "password"=>"pass1234",
+            "bio"=>"bio"
         ]);
 
         User::create([
             "name"=>"user2",
             "username"=>"pirate",
-            "password"=>"pass1234"
+            "password"=>"pass1234",
+            "bio"=>"bio"
         ]);
 
         User::create([
             "name"=>"user3",
             "username"=>"player",
-            "password"=>"pass1234"
+            "password"=>"pass1234",
+            "bio"=>"bio"
         ]);
 
         User::create([
             "name"=>"user4",
             "username"=>"noone",
-            "password"=>"pass1234"
+            "password"=>"pass1234",
+            "bio"=>"bio"
         ]);
     }
 }
