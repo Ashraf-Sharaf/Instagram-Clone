@@ -31,15 +31,32 @@ function Profile() {
     getProfile();
   }, []);
 
-  const { name, username } = profile;
+  const { name, username, bio } = profile;
 
   return (
     <div className="profiles container flex gap column align-center">
       <button className='logout-button' onClick={()=>logout()}>Logout</button>
       {/* <img src={image} className="imageUser" /> */}
      
-      <div>{name}</div>
+      {/* <div>{name}</div>
       <div>{username}</div>
+      <div>{bio}</div> */}
+      <div className=" column flex  full_w gap">
+      <div className="flex profile-info ">
+        <div>Name:</div>
+        <div>{name}</div>
+        </div>
+        <div className="flex profile-info">
+        <div>Username:</div>
+        <div>{username}</div>
+        </div>
+        <div className="flex profile-info">
+        <div>Bio:</div>
+        <div>{bio}</div>
+        </div>
+      </div>
+
+
 
       <EditProfile/>
     </div>

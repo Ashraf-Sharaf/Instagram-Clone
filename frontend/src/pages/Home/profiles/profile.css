@@ -33,7 +33,7 @@
   padding: 10px;
   border-radius: 5px;
   border: 1px solid white;
-  /* display: none; */
+
 }
 .edit_button{
   padding: 7px;
@@ -43,4 +43,6 @@
   color: rgb(0, 0, 0);
   cursor: pointer;
 }
-
+.profile-info {
+  justify-content: space-around;
+}
