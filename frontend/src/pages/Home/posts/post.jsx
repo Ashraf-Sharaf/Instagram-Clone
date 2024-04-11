@@ -9,11 +9,7 @@ function Post() {
     },
 
     {
-      username: "rabih",
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREy2PfYLs2DTQHoHyMSM5Loh7Ff3JlpfQFQidcNwZ9aQ&s"
-    },
-    {
-      username: "rabih",
+      username: "user 3",
       image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREy2PfYLs2DTQHoHyMSM5Loh7Ff3JlpfQFQidcNwZ9aQ&s"
     },
   ];

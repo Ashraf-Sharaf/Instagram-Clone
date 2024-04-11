@@ -9,7 +9,7 @@ function PostCard({post}) {
       <h2>{username}</h2></div>
 
       <img src={image} className="imagePost" />
-      <p>caption is here so as me</p>
+      <p>caption is here </p>
       
      <div><MdFavorite   onClick={()=>{}} /></div>
       <div className='comments-section flex between'>
