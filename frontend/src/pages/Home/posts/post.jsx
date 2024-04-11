@@ -21,6 +21,11 @@ function Post() {
 
   return (
     <div className="posts container ">
+      <div className="add-Post-container flex row center ">
+        <input type="file"></input>
+        <input className="caption-input"></input>
+        <button className="caption-button">Post</button>
+      </div>
       {posts.map((post) => {
         return <PostCard post={post}  />;
       })}
