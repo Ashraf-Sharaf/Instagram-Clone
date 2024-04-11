@@ -30,6 +30,7 @@
     width: 80%;
 }
 .comment-button{
+  cursor: pointer;
     background-color: black;
     color: rgb(69, 69, 235);
 }

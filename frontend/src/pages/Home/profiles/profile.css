@@ -11,3 +11,16 @@
     height: 100px;
     width: 100px;
   }
+
+  .logout-button{
+    background-color: black;
+    padding: 5px;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+  }
+  .logout-button:hover{
+    background-color: white;
+    color :black;
+  }
+

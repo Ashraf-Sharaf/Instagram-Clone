@@ -18,7 +18,7 @@
     border-radius: 50%;
   }
   .recommend-button{
-   
+    cursor: pointer;
     background-color: black;
     color: rgb(69, 69, 235);
   }

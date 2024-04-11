@@ -1,8 +1,10 @@
 import "./profile.css";
 import { useState, useEffect } from "react";
+import {useNavigate} from "react-router-dom";
 import axios from "axios";
 
 function Profile() {
+  const navigate=useNavigate();
   const [profile, setProfile] = useState({});
 
   const getProfile = async () => {
@@ -18,6 +20,12 @@ function Profile() {
     }
   };
 
+  const logout = ()=>{
+    window.localStorage.setItem("token",null);
+    navigate('/');
+    
+  }
+
   useEffect(() => {
     getProfile();
   }, []);
@@ -26,6 +34,7 @@ function Profile() {
 
   return (
     <div className="profiles container flex gap column align-center">
+      <button className='logout-button' onClick={()=>logout()}>Logout</button>
       {/* <img src={image} className="imageUser" /> */}
       <div>{name}</div>
       <div>{username}</div>
