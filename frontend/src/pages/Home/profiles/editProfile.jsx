@@ -37,7 +37,7 @@ function EditProfile() {
         onChange={(e) => setBio(e.target.value)}
       ></input>
       <div className="flex center">
-        <button className="edit_button" onClick={() => editUserProfile()}>
+        <button className="edit_button" onClick={() => {editUserProfile();}}>
           Edit
         </button>
       </div>

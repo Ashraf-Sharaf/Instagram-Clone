@@ -17,7 +17,7 @@ function Profile() {
       });
       if (result.status == 200) setProfile(result.data.user);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 
@@ -29,18 +29,14 @@ function Profile() {
 
   useEffect(() => {
     getProfile();
-  }, []);
+  }, [profile]);
 
   const { name, username, bio } = profile;
 
   return (
     <div className="profiles container flex gap column align-center">
       <button className='logout-button' onClick={()=>logout()}>Logout</button>
-      {/* <img src={image} className="imageUser" /> */}
-     
-      {/* <div>{name}</div>
-      <div>{username}</div>
-      <div>{bio}</div> */}
+
       <div className=" column flex  full_w gap">
       <div className="flex profile-info ">
         <div>Name:</div>
