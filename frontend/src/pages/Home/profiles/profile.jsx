@@ -2,6 +2,7 @@ import "./profile.css";
 import { useState, useEffect } from "react";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
+import EditProfile from "./editProfile";
 
 function Profile() {
   const navigate=useNavigate();
@@ -36,9 +37,11 @@ function Profile() {
     <div className="profiles container flex gap column align-center">
       <button className='logout-button' onClick={()=>logout()}>Logout</button>
       {/* <img src={image} className="imageUser" /> */}
+     
       <div>{name}</div>
       <div>{username}</div>
-      {/* <div>{bio}</div> */}
+
+      <EditProfile/>
     </div>
   );
 }

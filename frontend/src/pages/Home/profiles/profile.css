@@ -24,3 +24,23 @@
     color :black;
   }
 
+.edit_inputs{
+  height: 30px;
+  padding: 3px;
+  border-radius: 5px;
+}
+.edit_container{
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(129, 127, 127);
+  /* display: none; */
+}
+.edit_button{
+  padding: 7px;
+  width: 70px;
+  border-radius: 5px;
+  border: 2px solid black;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
