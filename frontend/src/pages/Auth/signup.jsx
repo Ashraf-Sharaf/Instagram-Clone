@@ -13,19 +13,14 @@ function Signup({ onToggle }) {
         username: username,
         password: password,
       };
-      const headers={"Content-Type": "multipart/form-data"}
-      const res = await axios.post("http://127.0.0.1:8000/api/register", data,headers);
-   
-      console.log(res.data);
+
+      const res = await axios.post("http://127.0.0.1:8000/api/register", data);
+      // redirect to login 
+
     } catch (error) {
-      console.error("Error ", error);
+      alert("Error, wrong inputs");
     }
   };
-
-
-
-
-
 
   return (
     <div className="page flex center column gap">
@@ -39,16 +34,29 @@ function Signup({ onToggle }) {
             setFullname(e.target.value);
           }}
         ></input>
-        <input className="register_inputs" placeholder=" Username"
-        onChange={(e) => {setUsername(e.target.value)}}
+        <input
+          className="register_inputs"
+          placeholder=" Username"
+          onChange={(e) => {
+            setUsername(e.target.value);
+          }}
         ></input>
         <input
           className="register_inputs"
           placeholder=" Password"
           type="password"
-          onChange={(e) => {setPassword(e.target.value)}}
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
         ></input>
-        <button className="register_button" onClick={()=>{registerUSer()}}>Sign up</button>
+        <button
+          className="register_button"
+          onClick={() => {
+            registerUSer();
+          }}
+        >
+          Sign up
+        </button>
       </div>
       <div className="redirection flex center gap">
         <p>Have an account?</p>

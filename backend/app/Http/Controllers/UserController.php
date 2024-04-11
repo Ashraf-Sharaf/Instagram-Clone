@@ -29,7 +29,7 @@ class UserController extends Controller
 
         $user = Auth::user();
         return response()->json([
-                'status' => 'success',
+                'status' => 200,
                 'user' => $user,
                 'authorisation' => [
                     'token' => $token,

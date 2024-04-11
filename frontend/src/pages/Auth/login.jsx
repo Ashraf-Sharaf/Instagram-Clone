@@ -10,12 +10,14 @@ function Login({ onToggle }) {
         username: username,
         password: password,
       };
-      const headers={"Content-Type": "multipart/form-data"}
-      const res = await axios.post("http://127.0.0.1:8000/api/login", data,headers);
-   
-      console.log(res.data);
+
+      const res = await axios.post("http://127.0.0.1:8000/api/login", data);
+      if (res.status == 200) {
+        localStorage.setItem("token", JSON.stringify(res.data.authorisation.token));
+        // redirect to home page 
+      }
     } catch (error) {
-      console.error("Error ", error);
+        alert("Error, wrong inputs");
     }
   };
 
