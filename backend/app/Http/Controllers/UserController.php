@@ -17,9 +17,11 @@ class UserController extends Controller
             'username' => 'required|string',
             'password' => 'required|string',
         ]);
+
         $credentials = $request->only('username', 'password');
 
         $token = Auth::attempt($credentials);
+
         if (!$token) {
             return response()->json([
                 'status' => 'error',
@@ -52,15 +54,12 @@ class UserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        $token = Auth::login($user);
+  
         return response()->json([
             'status' => 200,
             'message' => 'User created successfully',
             'user' => $user,
-            'authorisation' => [
-                'token' => $token,
-                'type' => 'bearer',
-            ]
+
         ]);
     }
 
@@ -73,16 +72,16 @@ class UserController extends Controller
         ]);
     }
 
-    public function refresh()
-    {
-        return response()->json([
-            'status' => 'success',
-            'user' => Auth::user(),
-            'authorisation' => [
-                'token' => Auth::refresh(),
-                'type' => 'bearer',
-            ]
-        ]);
-    }
 
+    public function getUser()
+    {
+        $user=Auth::user();
+        
+        return response()->json([
+            'status'=>200,
+            'user' => $user
+        ]);
+  
+    }
 }
+

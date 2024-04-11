@@ -1,30 +1,39 @@
-import './profile.css';
-import { useState } from "react";
-
+import "./profile.css";
+import { useState , useEffect} from "react";
+import axios from "axios";
 
 function Profile() {
-  const data = 
-    {
-      fullname: "ashraf sharaf",
-      email : "ashraf@gmail.com",
-      username: "ashraf",
-      image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREy2PfYLs2DTQHoHyMSM5Loh7Ff3JlpfQFQidcNwZ9aQ&s',
-      bio:"iam a software dev who loves gaming"
-    };
-  const [profile, setProfile] = useState(data);
+  const [profile, setProfile] = useState({});
 
+function getProfile(){
+  axios({
+    method: "get",
+    url: "http://127.0.0.1:8000/api/getuser",
+    headers: {
+      Authorization: "Bearer " + window.localStorage.getItem("token"),
+    },
+  }).then(function(res)
+  {
+    if (res.status === 200) {
+      setProfile(res.data.user);
+    }
+  });
+}
+  
+useEffect(() => {
+  getProfile();
+}, []);
 
-const {fullname,image,email,username,bio}=data;
+  const {name,username}=profile;
 
-    return <div className="profiles container flex gap column align-center">
-      <img src={image} className="imageUser" />
-      <div>{fullname}</div>
-      <div>{email}</div>
+  return (
+    <div className="profiles container flex gap column align-center">
+      {/* <img src={image} className="imageUser" /> */}
+      <div>{name}</div>
       <div>{username}</div>
-      <div>{bio}</div>
-      
+      {/* <div>{bio}</div> */}
     </div>
-  }
-  
-  export default Profile;
-  
+  );
+}
+
+export default Profile;

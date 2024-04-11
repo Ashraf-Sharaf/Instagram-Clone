@@ -19,7 +19,7 @@ function Signup({ onToggle }) {
       onToggle();
       }
     } catch (error) {
-      alert("Error, wrong inputs");
+      alert("Error");
     }
   };
 

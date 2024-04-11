@@ -14,16 +14,16 @@ function Login({ onToggle }) {
         password: password,
       };
 
-      const res = await axios.post("http://127.0.0.1:8000/api/login", data);
+      const res =  await axios.post("http://127.0.0.1:8000/api/login", data);
       if (res.status == 200) {
         localStorage.setItem(
           "token",
-          JSON.stringify(res.data.authorisation.token)
+          res.data.authorisation.token
         );
         navigate('/home');
       }
     } catch (error) {
-      alert("Error, wrong inputs");
+      alert("Error");
     }
   };
 
