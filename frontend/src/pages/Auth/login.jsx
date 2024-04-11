@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 function Login({ onToggle }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const loginUSer = async () => {
     try {
@@ -13,11 +16,14 @@ function Login({ onToggle }) {
 
       const res = await axios.post("http://127.0.0.1:8000/api/login", data);
       if (res.status == 200) {
-        localStorage.setItem("token", JSON.stringify(res.data.authorisation.token));
-        // redirect to home page 
+        localStorage.setItem(
+          "token",
+          JSON.stringify(res.data.authorisation.token)
+        );
+        navigate('/home');
       }
     } catch (error) {
-        alert("Error, wrong inputs");
+      alert("Error, wrong inputs");
     }
   };
 
